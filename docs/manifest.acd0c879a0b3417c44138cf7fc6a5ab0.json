@@ -33,7 +33,6 @@
   ],
   "name": "30sec",
   "short_name": "30sec",
-  "orientation": "any",
   "display": "standalone",
   "start_url": "https://inotom.github.io/30sec/"
 }

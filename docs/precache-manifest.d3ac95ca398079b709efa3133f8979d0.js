@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "js/main.min.js"
   },
   {
-    "revision": "8a3bf29a221552904ad5b1c23c253e38",
+    "revision": "a553dfdbe846eb88d87c6bf7ed854b01",
     "url": "index.html"
   },
   {
