@@ -1,0 +1,70 @@
+@charset 'UTF-8';
+
+:global {
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  body {
+    margin: 0;
+  }
+}
+
+.root {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transition: background-color .2s ease-out 0s;
+}
+
+.count {
+  position: relative;
+  z-index: 2;
+  font: {
+    size: 220px;
+    family: Roboto, Helvetica;
+  }
+  line-height: 1;
+}
+
+.total {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  font: {
+    size: 24px;
+  }
+}
+
+.ripple {
+  position: absolute;
+  z-index: 1;
+  width: 320px;
+  height: 320px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.rippleAnim {
+  @extend .ripple;
+  animation: anim-ripple .75s ease-out;
+}
+
+@keyframes anim-ripple {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

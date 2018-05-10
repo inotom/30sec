@@ -1,0 +1,45 @@
+{
+  "name": "30sec",
+  "version": "2.0.0",
+  "description": "30 seconds timer",
+  "config": {
+    "dist_dir": "dist",
+    "src_dir": "src"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production webpack -p",
+    "clean": "rimraf '**/.DS_Store' & rimraf $npm_package_config_dist_dir",
+    "lint:js": "eslint $npm_package_config_src_dir/js",
+    "lint:sass": "sass-lint -c .sass-lint.yml -v -q",
+    "prettier": "prettier --write 'src/js/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Serendip (http://www.serendip.ws/)",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "8.4.1",
+    "babel-eslint": "8.2.3",
+    "babel-loader": "7.1.4",
+    "babel-plugin-transform-inline-environment-variables": "0.4.1",
+    "babel-preset-env": "1.6.1",
+    "css-loader": "0.28.11",
+    "eslint": "4.19.1",
+    "html-webpack-plugin": "3.2.0",
+    "mithril": "1.1.6",
+    "node-sass": "4.9.0",
+    "postcss-loader": "2.1.5",
+    "prettier": "1.12.1",
+    "rimraf": "2.6.2",
+    "sass-lint": "1.12.1",
+    "sass-loader": "7.0.1",
+    "style-loader": "0.21.0",
+    "webpack": "4.8.1",
+    "webpack-cli": "2.1.3",
+    "webpack-dev-server": "3.1.4",
+    "webpack-pwa-manifest": "3.6.2",
+    "workbox-webpack-plugin": "3.2.0"
+  },
+  "dependencies": {}
+}

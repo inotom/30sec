@@ -1,0 +1,7 @@
+.DS_Store
+*.swp
+*~
+*.log
+*.lock
+dist/
+node_modules/
