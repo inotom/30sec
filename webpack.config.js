@@ -43,7 +43,7 @@ if (!IS_DEVS) {
           sizes: [96, 128, 192, 256, 384, 512]
         }
       ],
-      orientation: 'portrait',
+      orientation: 'portrait-primary',
       display: 'standalone',
       start_url: 'https://inotom.github.io/30sec/' // eslint-disable-line camelcase
     }),
