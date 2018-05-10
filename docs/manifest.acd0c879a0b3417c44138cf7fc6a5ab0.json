@@ -35,5 +35,5 @@
   "short_name": "30sec",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "."
+  "start_url": "https://inotom.github.io/30sec/"
 }

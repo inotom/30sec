@@ -45,7 +45,7 @@ if (!IS_DEVS) {
       ],
       orientation: 'portrait',
       display: 'standalone',
-      start_url: '.' // eslint-disable-line camelcase
+      start_url: 'https://inotom.github.io/30sec/' // eslint-disable-line camelcase
     }),
     new webpack.BannerPlugin(
       `${pkg.name} v${pkg.version} ${pkg.author} | ${pkg.license}`
@@ -53,7 +53,7 @@ if (!IS_DEVS) {
     new WorkboxPlugin.GenerateSW({
       runtimeCaching: [
         {
-          urlPattern: '/',
+          urlPattern: '/30sec/',
           handler: 'cacheFirst',
           options: {
             cacheName: 'top-page-cache',
@@ -63,7 +63,7 @@ if (!IS_DEVS) {
           }
         },
         {
-          urlPattern: /\/js\/.+/,
+          urlPattern: /\/30sec\/js\/.+/,
           handler: 'cacheFirst',
           options: {
             cacheName: 'scripts-cache',

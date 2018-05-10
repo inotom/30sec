@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('/service-worker.js')
+      .register('/30sec/service-worker.js')
       .then(function(registration) {
         console.info(
           'ServiceWorker registration successful with scope: ',
