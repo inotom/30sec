@@ -18,7 +18,7 @@ const IS_DEVS = process.env.NODE_ENV === 'development';
 const plugins = [
   new HTMLPlugin({
     title: APP_TITLE,
-    color: '#afd670',
+    color: '#b6fbfb',
     filename: 'index.html',
     template: 'src/html/index.html'
   })
