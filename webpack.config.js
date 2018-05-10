@@ -1,6 +1,6 @@
 /** @prettier */
 
-const DIST_DIR = 'dist';
+const DIST_DIR = 'docs';
 const PORT = 3000;
 const APP_TITLE = '30sec';
 const A_DAY = 60 * 60 * 24;
@@ -11,8 +11,8 @@ const pkg = require('./package.json');
 const autoprefixer = require('autoprefixer');
 const HTMLPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const IS_DEVS = process.env.NODE_ENV === 'development';
 
 const plugins = [
@@ -34,21 +34,19 @@ if (!IS_DEVS) {
         }
       }
     }),
-    new WebpackPwaManifest({
-      name: APP_TITLE,
-      short_name: APP_TITLE, // eslint-disable-line camelcase
-      icons: [
-        {
-          src: path.resolve(__dirname, 'src', 'img', 'app-icon.png'),
-          sizes: [96, 128, 192, 256, 384, 512]
-        }
-      ],
-      display: 'standalone',
-      start_url: 'https://inotom.github.io/30sec/' // eslint-disable-line camelcase
-    }),
     new webpack.BannerPlugin(
       `${pkg.name} v${pkg.version} ${pkg.author} | ${pkg.license}`
     ),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, 'src', 'img'),
+        to: path.resolve(__dirname, DIST_DIR, 'img')
+      },
+      {
+        from: path.resolve(__dirname, 'src', 'json', 'manifest.json'),
+        to: path.resolve(__dirname, DIST_DIR)
+      }
+    ]),
     new WorkboxPlugin.GenerateSW({
       runtimeCaching: [
         {
