@@ -1,0 +1,39 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.4bd8a8125ca3645884ac426e1be59b70.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.b051b451ba6b29c5cc5cb9c18f3b0a26.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.632baabe483ed660587cb6cb56268718.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.fe0a92d2cf5a75b029fe07629df3706b.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.61e6a1f830a0c0b95af2895fe1d1181d.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.019e3fd99e9e38404f1ee4e081419095.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "30sec",
+  "short_name": "30sec",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "."
+}
