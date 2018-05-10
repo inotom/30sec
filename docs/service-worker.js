@@ -26,6 +26,6 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute("/30sec/", workbox.strategies.cacheFirst({ cacheName: "top-page-cache", plugins: [new workbox.expiration.Plugin({"maxAgeSeconds":1209600})] }), 'GET');
-workbox.routing.registerRoute(/\/30sec\/js\/.+/, workbox.strategies.cacheFirst({ cacheName: "scripts-cache", plugins: [new workbox.expiration.Plugin({"maxAgeSeconds":1209600})] }), 'GET');
+workbox.routing.registerRoute("/30sec/", workbox.strategies.networkFirst({ cacheName: "top-page-cache", plugins: [] }), 'GET');
+workbox.routing.registerRoute(/\/30sec\/js\/.+/, workbox.strategies.networkFirst({ cacheName: "scripts-cache", plugins: [] }), 'GET');
 workbox.routing.registerRoute(/\.(png|jpe?g|svg)/, workbox.strategies.cacheFirst({ cacheName: "assets", plugins: [new workbox.expiration.Plugin({"maxAgeSeconds":1209600})] }), 'GET');

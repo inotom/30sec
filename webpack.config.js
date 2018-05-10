@@ -51,22 +51,16 @@ if (!IS_DEVS) {
       runtimeCaching: [
         {
           urlPattern: '/30sec/',
-          handler: 'cacheFirst',
+          handler: 'networkFirst',
           options: {
-            cacheName: 'top-page-cache',
-            expiration: {
-              maxAgeSeconds: A_DAY * 14
-            }
+            cacheName: 'top-page-cache'
           }
         },
         {
           urlPattern: /\/30sec\/js\/.+/,
-          handler: 'cacheFirst',
+          handler: 'networkFirst',
           options: {
-            cacheName: 'scripts-cache',
-            expiration: {
-              maxAgeSeconds: A_DAY * 14
-            }
+            cacheName: 'scripts-cache'
           }
         },
         {
